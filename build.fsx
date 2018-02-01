@@ -64,12 +64,12 @@ Target "BuildTest" (fun _ ->
 
 Target "RunTest" (fun _ ->
     DotNetCli.RunCommand id ("HttpFs.UnitTests/bin/"+configuration+"/netcoreapp2.0/HttpFs.UnitTests.dll --summary --sequenced")
-    Shell.Exec ("HttpFs.UnitTests/bin/"+configuration+"/net461/HttpFs.UnitTests.exe","--summary --sequenced")
-    |> fun r -> if r<>0 then failwith "HttpFs.UnitTests.exe failed"
+    //Shell.Exec ("HttpFs.UnitTests/bin/"+configuration+"/net461/HttpFs.UnitTests.exe","--summary --sequenced")
+    //|> fun r -> if r<>0 then failwith "HttpFs.UnitTests.exe failed"
 
     DotNetCli.RunCommand id ("HttpFs.IntegrationTests/bin/"+configuration+"/netcoreapp2.0/HttpFs.IntegrationTests.dll --summary --sequenced")
-    Shell.Exec ("HttpFs.IntegrationTests/bin/"+configuration+"/net461/HttpFs.IntegrationTests.exe","--summary --sequenced")
-    |> fun r -> if r<>0 then failwith "HttpFs.IntegrationTests.exe failed"
+    //Shell.Exec ("HttpFs.IntegrationTests/bin/"+configuration+"/net461/HttpFs.IntegrationTests.exe","--summary --sequenced")
+    //|> fun r -> if r<>0 then failwith "HttpFs.IntegrationTests.exe failed"
 )
 
 Target "Pack" (fun _ ->

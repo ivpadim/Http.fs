@@ -7,9 +7,9 @@ mono:
   - latest # => "stable release"
   - weekly # => "latest commits"
 
-install:
-  - rvm install 2.2.3
-  - gem install bundler
+# install:
+#   - rvm install 2.2.3
+#   - gem install bundler
 
 notifications:
   email: false
