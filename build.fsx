@@ -82,7 +82,7 @@ Target "Pack" (fun _ ->
             sprintf "/p:Authors=\"%s\"" authors
             sprintf "/p:Owners=\"%s\"" owners
             "/p:PackageRequireLicenseAcceptance=false"
-            sprintf "/p:Description=\"%s\"" description
+            sprintf "/p:Description=\"%s\"" (description.Replace(",",""))
             sprintf "/p:PackageReleaseNotes=\"%O\"" ((toLines release.Notes).Replace(",",""))
             sprintf "/p:Copyright=\"%s\"" copyright
             sprintf "/p:PackageTags=\"%s\"" tags
